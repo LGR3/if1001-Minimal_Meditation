@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:layout_marginBottom="568dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/title"
         android:textColor="#00BCD4"
@@ -42,11 +41,11 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="0dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="314dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="2dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:contentDescription="@string/home_page"
         android:scaleType="fitXY"
@@ -54,18 +53,17 @@
         android:tintMode="src_in"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/home_page" />
 
     <ImageButton
         android:id="@+id/imageButton10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="31dp"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="2dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/info"
@@ -75,40 +73,26 @@
         android:tintMode="src_in"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/imageButton18"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/info_page" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="26dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/settings"
-        android:scaleType="fitXY"
-        android:tint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton18"
-        app:layout_constraintTop_toTopOf="@+id/imageButton18"
-        app:srcCompat="@drawable/settings_page" />
-
-    <ImageButton
         android:id="@+id/imageButton18"
-        android:layout_width="66dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="2dp"
         android:backgroundTint="#FFFEFE"
         android:contentDescription="@string/history"
         android:scaleType="fitXY"
         android:tint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton16"
-        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/history_page" />
 
     <Button
@@ -132,5 +116,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="640dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#F8F5F5"
+        android:contentDescription="@string/extended_page"
+        android:scaleType="fitXY"
+        android:tint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/extended_page" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
