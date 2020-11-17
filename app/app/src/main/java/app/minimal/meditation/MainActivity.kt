@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -17,11 +16,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private lateinit var currentLocation: String
     private val permissionCode = 101
+    private lateinit var meditationDBHelper : MeditationDBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        meditationDBHelper = MeditationDBHelper(this)
         fusedLocationProviderClient =  LocationServices.getFusedLocationProviderClient(this@MainActivity)
         fetchLocation()
     }
@@ -52,18 +53,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTimer(view: View) {
-        var counter = 0
+        var counter = 60
+        val currentTimestamp = System.currentTimeMillis() / 1000
         val startBtn: Button = findViewById(R.id.start_btn)
         startBtn.isEnabled = false;
         object : CountDownTimer(60000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 startBtn.text = counter.toString()
-                counter++
+                counter--
             }
             override fun onFinish() {
                 val endStr: String = getString(R.string.end_time)
-                Log.d("info", currentLocation)
                 startBtn.text = endStr
+                meditationDBHelper.insertMeditation(
+                    MeditationModel(
+                        location = currentLocation,
+                        timestamp = currentTimestamp.toInt(),
+                        seconds = 60
+                    )
+                )
             }
         }.start()
     }
