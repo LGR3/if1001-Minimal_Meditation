@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaseActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/title"
+        android:textColor="#00BCD4"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/history"
+        app:layout_constraintGuide_begin="100dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="168dp" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:contentDescription="@string/home_page"
+        android:scaleType="fitXY"
+        android:tint="#000000"
+        android:tintMode="src_in"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/home_page" />
+
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/info"
+        android:foregroundTint="#FFFFFF"
+        android:scaleType="fitXY"
+        android:tint="#000000"
+        android:tintMode="src_in"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/history"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/extended"
+        app:layout_constraintTop_toTopOf="@+id/home"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/info_page" />
+
+    <ImageButton
+        android:id="@+id/history"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#FFFEFE"
+        android:contentDescription="@string/history"
+        android:scaleType="fitXY"
+        android:tint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/history_page" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="640dp" />
+
+    <ImageButton
+        android:id="@+id/extended"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#F8F5F5"
+        android:contentDescription="@string/extended_page"
+        android:scaleType="fitXY"
+        android:tint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/extended_page" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

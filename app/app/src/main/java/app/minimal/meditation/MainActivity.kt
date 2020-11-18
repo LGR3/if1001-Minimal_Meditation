@@ -7,12 +7,11 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private lateinit var currentLocation: String
     private val permissionCode = 101
@@ -25,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         meditationDBHelper = MeditationDBHelper(this)
         fusedLocationProviderClient =  LocationServices.getFusedLocationProviderClient(this@MainActivity)
         fetchLocation()
+
+        loadMainActivity()
+        loadExtendedActivity()
+        loadInfoActivity()
+        loadHistoryActivity()
     }
 
     private fun fetchLocation() {
