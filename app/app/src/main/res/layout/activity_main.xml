@@ -26,6 +26,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="262dp"
+        android:layout_height="397dp"
+        app:layout_constraintBottom_toBottomOf="@+id/base"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintStart_toStartOf="@+id/base"
+        app:layout_constraintTop_toTopOf="@+id/base"
+        app:srcCompat="@drawable/pomba"
+        android:contentDescription="@string/image" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

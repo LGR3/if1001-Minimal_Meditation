@@ -57,26 +57,32 @@ class MainActivity : BaseActivity() {
     }
 
     fun startTimer(view: View) {
-        var counter = 60
-        val currentTimestamp = System.currentTimeMillis() / 1000
         val startBtn: Button = findViewById(R.id.start_btn)
-        startBtn.isEnabled = false;
-        object : CountDownTimer(60000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                startBtn.text = counter.toString()
-                counter--
-            }
-            override fun onFinish() {
-                val endStr: String = getString(R.string.end_time)
-                startBtn.text = endStr
-                meditationDBHelper.insertMeditation(
-                    MeditationModel(
-                        location = currentLocation,
-                        timestamp = currentTimestamp.toInt(),
-                        seconds = 60
+        val startStr : String = getString(R.string.start_button)
+        if (startBtn.text != startStr) {
+            startBtn.text = startStr
+        } else {
+            var counter = 60
+            val currentTimestamp = System.currentTimeMillis() / 1000
+            startBtn.isEnabled = false;
+            object : CountDownTimer(60000, 1000) {
+                override fun onTick(millisUntilFinished: Long) {
+                    startBtn.text = counter.toString()
+                    counter--
+                }
+                override fun onFinish() {
+                    val endStr: String = getString(R.string.end_time)
+                    startBtn.text = endStr
+                    meditationDBHelper.insertMeditation(
+                        MeditationModel(
+                            location = currentLocation,
+                            timestamp = currentTimestamp.toInt(),
+                            seconds = 60
+                        )
                     )
-                )
-            }
-        }.start()
+                    startBtn.isEnabled = true;
+                }
+            }.start()
+        }
     }
 }
