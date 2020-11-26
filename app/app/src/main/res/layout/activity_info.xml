@@ -8,6 +8,39 @@
 
     <include
         android:id="@+id/base"
-        layout="@layout/activity_base" />
+        layout="@layout/activity_base"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-34dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="@+id/base"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/base">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="272dp"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="@string/infotext"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#F30F112B"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,4 +9,7 @@
     <string name="end_time">Sinta-se em paz!</string>
     <string name="extended_page">Extended page</string>
     <string name="image">image</string>
+    <string name="infotext">
+        Medite é um aplicativo de meditação minimalista para executivos e pessoas com pouco tempo disponível.\nNeste aplicativo você encontrará uma meditação de 1 minuto para os momentos em que precisa ser mais rápido, e uma de 5 minutos para uma meditação mais profunda, além de encontrar gráficos para acompanhar seu progresso de meditações.\nA meditação traz diversos benefícios para a sua vida, vários deles comprovados cientificamente. Nós sabemos que seu tempo é precioso, e acreditamos que 1 minuto diário é o suficiente para te ajudar a manter o foco nas suas atividades diárias e aumentar imensamente sua qualidade de vida.\nMedite, e sinta-se em paz!
+    </string>
 </resources>

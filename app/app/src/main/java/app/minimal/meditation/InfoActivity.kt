@@ -9,7 +9,6 @@ class InfoActivity : BaseActivity() {
 
         loadMainActivity()
         loadExtendedActivity()
-        loadInfoActivity()
         loadHistoryActivity()
     }
 }

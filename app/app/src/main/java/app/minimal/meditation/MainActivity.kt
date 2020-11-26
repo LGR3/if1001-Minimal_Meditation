@@ -25,7 +25,6 @@ class MainActivity : BaseActivity() {
         fusedLocationProviderClient =  LocationServices.getFusedLocationProviderClient(this@MainActivity)
         fetchLocation()
 
-        loadMainActivity()
         loadExtendedActivity()
         loadInfoActivity()
         loadHistoryActivity()
