@@ -2,16 +2,12 @@ package app.minimal.meditation
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import kotlinx.android.synthetic.main.history_row.view.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.time.seconds
 
 class HistoryActivity : BaseActivity() {
     private lateinit var meditationDBHelper : MeditationDBHelper
@@ -34,13 +30,13 @@ class HistoryActivity : BaseActivity() {
         val total = meditationDBHelper.getTotalSeconds()
         val totalHours: TextView = findViewById(R.id.totalHours)
         val hours = total.toDouble() / 3600
-        totalHours.text = hours.toString()
+        totalHours.text = String.format("%.2f", hours)
     }
 
     private fun fillHistory() {
         val allMeditations = meditationDBHelper.readAllMeditations()
         val reversedMeditations = allMeditations.reversed()
-        reversedMeditations.forEachIndexed { index, it ->
+        reversedMeditations.forEach {
             val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val rowView: View = inflater.inflate(R.layout.history_row, null)
             parentLinearLayout!!.addView(rowView, parentLinearLayout!!.childCount)
@@ -52,6 +48,11 @@ class HistoryActivity : BaseActivity() {
             val datetime = Date(it.timestamp.toLong() * 1000)
             val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
             val formattedDate = formatter.format(datetime)
+
+            if (it.seconds == 300) {
+                seconds.textSize = 22.toFloat()
+                seconds.setTextColor(-0xff0100)
+            }
 
             location.text = it.location
             seconds.text = "${it.seconds}s"

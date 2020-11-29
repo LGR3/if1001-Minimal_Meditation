@@ -34,6 +34,7 @@
             android:textAlignment="gravity"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/seconds"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,8 @@
             android:text="seconds"
             android:textAlignment="gravity"
             android:textColor="@android:color/holo_blue_dark"
-            android:textSize="16sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/timestamp"
             app:layout_constraintTop_toTopOf="parent" />
@@ -63,6 +65,7 @@
             android:textAlignment="gravity"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
