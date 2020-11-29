@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <pl.hypeapp.materialtimelineview.MaterialTimelineView
+        android:id="@+id/history_row"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/timestamp"
+        app:layout_constraintTop_toBottomOf="@+id/timestamp"
+        app:timeline_bottom_radio_color="@android:color/holo_blue_dark"
+        app:timeline_line_color="@android:color/holo_blue_dark"
+        app:timeline_margin_start="32dp"
+        app:timeline_position="middle"
+        app:timeline_radio_outline_radius="20"
+        app:timeline_radio_radius="12"
+        app:timeline_top_radio_color="@android:color/holo_blue_dark"
+        app:timeline_type="line">
+
+        <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="160dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="casual"
+            android:text="timestamp"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/seconds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/seconds"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="casual"
+            android:text="seconds"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/timestamp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="357dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="casual"
+            android:text="location"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timestamp"
+            app:layout_constraintVertical_bias="0.359" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="88dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:foregroundTint="@android:color/holo_blue_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </pl.hypeapp.materialtimelineview.MaterialTimelineView>
+
+</LinearLayout>
