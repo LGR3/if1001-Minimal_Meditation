@@ -45,9 +45,14 @@ class MainActivity : BaseActivity() {
         task.addOnSuccessListener { loc ->
             if (loc != null) {
                 val location_list = geo.getFromLocation(
-                    loc.latitude, loc.longitude, 1
+                    loc.latitude, loc.longitude, 10
                 )
-                val city: String = location_list[0].locality
+                var city = ""
+                location_list.takeWhile {city == ""}.forEach {
+                    if (it.locality != null) {
+                        city = it.locality
+                    }
+                }
                 val state: String = location_list[0].adminArea
                 val country: String = location_list[0].countryName
                 currentLocation = String.format("%s, %s, %s", city, state, country)

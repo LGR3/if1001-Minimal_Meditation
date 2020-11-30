@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".BaseActivity">
 
     <TextView
@@ -64,9 +65,9 @@
         android:layout_width="75dp"
         android:layout_height="60dp"
         android:layout_marginBottom="2dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:contentDescription="@string/info"
-        android:foregroundTint="#FFFFFF"
+        android:foregroundTint="@color/colorPrimaryDark"
         android:scaleType="fitXY"
         android:tint="#000000"
         android:tintMode="src_in"
@@ -84,7 +85,7 @@
         android:layout_height="60dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="2dp"
-        android:backgroundTint="#FFFEFE"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:contentDescription="@string/history"
         android:scaleType="fitXY"
         android:tint="#000000"
@@ -107,7 +108,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="2dp"
-        android:backgroundTint="#F8F5F5"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:contentDescription="@string/extended_page"
         android:scaleType="fitXY"
         android:tint="#000000"

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFFFFF"
     tools:context=".MainActivity">
 
     <include
@@ -30,12 +29,12 @@
         android:id="@+id/imageView"
         android:layout_width="262dp"
         android:layout_height="397dp"
+        android:contentDescription="@string/image"
         app:layout_constraintBottom_toBottomOf="@+id/base"
         app:layout_constraintEnd_toEndOf="@+id/base"
         app:layout_constraintStart_toStartOf="@+id/base"
         app:layout_constraintTop_toTopOf="@+id/base"
-        app:srcCompat="@drawable/pomba"
-        android:contentDescription="@string/image" />
+        app:srcCompat="@drawable/pomba" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
